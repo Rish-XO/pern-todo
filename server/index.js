@@ -4,7 +4,7 @@ const cors = require("cors");
 
 //middleware
 app.use(cors());  
-app.use
+app.use(express.json())
 
 
 app.listen(5000, () => {
