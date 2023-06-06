@@ -1,27 +1,36 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const pool = require('./db')
+const pool = require("./db");
 
-pool.connect()
+pool.connect();
+
 
 //middleware
-app.use(cors());  
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 
 //routes
+app.get('/', (req, res) => {
+    res.send('haha')
+})
 
 //create a todo
 
-app.post('/todos' , async(req,res) => {
-    try {
-        console.log(req.body);
-    } catch (error) {
-        console.log(error.message);
-    }
-})
+app.post("/todos", async (req, res) => {
+  try {
+    const { description } = req.body;
+    const newTodo = await pool.query(
+      'INSERT INTO "toDo" (description) VALUES($1)',
+      [description]
+    );
+    res.json(newTodo)
+  } catch (error) {
+    console.log(error.message);
+  }
+});
 
-//get all todos 
+//get all todos
 
 //get a todo
 
