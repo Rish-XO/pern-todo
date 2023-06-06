@@ -14,6 +14,7 @@ function InputTodo() {
       });
 
       window.location = "/";
+      console.log(response);
     } catch (error) {
       console.log(error.message);
     }
