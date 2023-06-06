@@ -1,6 +1,6 @@
 CREATE DATABASE db1;
 
-CREATE TABLE toDo(
+CREATE TABLE todo(
     todo_id SERIAL PRIMARY KEY,
     description VARCHAR(255)
 )
