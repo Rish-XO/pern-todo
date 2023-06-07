@@ -43,7 +43,7 @@ function EditTodo({ todo }) {
                 data-bs-dismiss="modal"
                 onClick={() => setDescription(todo.description)}
               ></button>
-            </div> 
+            </div>  
 
             <div class="modal-body">
               <input
