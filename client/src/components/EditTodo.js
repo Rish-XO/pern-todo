@@ -11,10 +11,10 @@ function EditTodo({ todo }) {
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body)
+        body: JSON.stringify(body),
       }
     );
-    window.location='/'
+    window.location = "/";
   };
 
   return (
@@ -28,7 +28,11 @@ function EditTodo({ todo }) {
         Edit
       </button>
 
-      <div class="modal" id={`id${todo.todo_id}`}>
+      <div
+        class="modal"
+        id={`id${todo.todo_id}`}
+        onClick={() => setDescription(todo.description)}
+      >
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -37,7 +41,7 @@ function EditTodo({ todo }) {
                 type="button"
                 class="btn-close"
                 data-bs-dismiss="modal"
-                onClick={()=>setDescription(todo.description)}
+                onClick={() => setDescription(todo.description)}
               ></button>
             </div>
 
@@ -55,7 +59,7 @@ function EditTodo({ todo }) {
                 type="button"
                 class="btn btn-primary"
                 data-bs-dismiss="modal"
-                onClick={(e) => updateTodo(e)}
+                onClick={updateTodo}
               >
                 Edit
               </button>
@@ -63,7 +67,7 @@ function EditTodo({ todo }) {
                 type="button"
                 class="btn btn-danger"
                 data-bs-dismiss="modal"
-                onClick={()=>setDescription(todo.description)}
+                onClick={() => setDescription(todo.description)}
               >
                 Close
               </button>
