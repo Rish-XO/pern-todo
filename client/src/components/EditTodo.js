@@ -52,7 +52,7 @@ function EditTodo({ todo }) {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />
-            </div>
+            </div> 
 
             <div class="modal-footer">
               <button
