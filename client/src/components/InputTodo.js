@@ -20,7 +20,7 @@ function InputTodo() {
     }
   };
 
-  return (  
+  return (    
     <Fragment>
       <h1 className="text-center mt-5">Todo List</h1>
       <div className="container ">
