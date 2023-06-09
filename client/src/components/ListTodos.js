@@ -31,7 +31,7 @@ function ListTodos() {
               <th>Edit</th>
               <th>Delete</th>
             </tr>
-          </thead>
+          </thead> 
           <tbody>
             {todos.map((todo) => (
               <tr key={todo.todo_id}>
