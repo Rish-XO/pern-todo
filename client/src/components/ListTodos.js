@@ -36,7 +36,7 @@ function ListTodos() {
             {todos.map((todo) => (
               <tr key={todo.todo_id}>
                 <td>{todo.description}</td>
-                <td>
+                 <td>
                   <EditTodo todo={todo}/>
                 </td>
                 <td>
