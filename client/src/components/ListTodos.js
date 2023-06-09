@@ -8,7 +8,7 @@ function ListTodos() {
     const deleteTodo = await fetch(`http://localhost:5000/todos/${id}`, {
       method: "DELETE",
     });
-    setTodos(todos.filter((todo) => todo.todo_id !== id))
+    setTodos(todos.filter((todo) => todo.todo_id !== id));
   };
 
   const getTodos = async () => {
@@ -31,13 +31,13 @@ function ListTodos() {
               <th>Edit</th>
               <th>Delete</th>
             </tr>
-          </thead>  
+          </thead>
           <tbody>
             {todos.map((todo) => (
               <tr key={todo.todo_id}>
                 <td>{todo.description}</td>
-                 <td>
-                  <EditTodo todo={todo}/>
+                <td>
+                  <EditTodo todo={todo} />
                 </td>
                 <td>
                   <button
