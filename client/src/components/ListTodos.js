@@ -40,7 +40,7 @@ function ListTodos() {
                   <EditTodo todo={todo} />
                 </td>
                 <td>
-                   <button
+                  <button
                     className="btn btn-danger"
                     onClick={() => deleteTodo(todo.todo_id)}
                   >
